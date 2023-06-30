@@ -1,0 +1,284 @@
+:root {
+    --mc: #143A62;
+    --wc: #ffffff;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ================ */
+
+
+
+/* header */
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--wc);
+    z-index: 999;
+}
+
+.header .header_wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    transition: 0.5s;
+}
+
+.header.on {
+    border-bottom: 1px solid #ddd;
+}
+
+.header.on .header_wrap {
+    height: 70px;
+}
+
+.header .logo {
+    font-size: 0;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+
+    white-space: nowrap;
+    word-break: keep-all;
+
+    line-height: 30px;
+}
+
+.header .gnb>ul>li>a {
+    /* outline: 1px solid tomato; */
+
+    display: block;
+    line-height: 100px;
+    font-size: 18px;
+}
+
+.header .gnb>ul>li>a i {
+    color: #ddd;
+}
+
+.header .gnb>ul>li>.sub {
+    position: absolute;
+    top: 80px;
+    left: -30px;
+    white-space: nowrap;
+    background: var(--wc);
+    padding: 30px 30px;
+    outline: 2px solid var(--mc);
+
+    display: none;
+}
+
+.header .gnb>ul>li:hover>.sub {
+    display: block;
+}
+
+.header .gnb>ul>li>.sub a {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.header .search {
+    margin: 0 0 0 50px;
+}
+
+.header .search input[type="text"] {
+    border: none;
+    outline: none;
+    width: 100px;
+    border-bottom: 1px solid #666;
+
+    font-size: 14px;
+    font-family: 'Noto Sans KR';
+
+    transition: 0.5s;
+}
+
+.header .search input[type="text"]:focus {
+    width: 160px;
+}
+
+.header .search input[type="text"]::placeholder {
+    color: #ddd;
+}
+
+.header .search input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.header .search button {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+/* main greet */
+.content {
+    padding: 100px 0;
+}
+
+.content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--mc);
+}
+
+.content strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31px;
+    margin: 0 0 20px 0;
+}
+
+.content .txt_box {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+
+    word-break: keep-all;
+    text-align: justify
+}
+
+.content img {
+    float: left;
+    width: 30%;
+    height: 250px;
+}
+
+.content span {
+    display: block;
+    text-align: right;
+}
+
+/* footer */
+.footer {
+    background: #444;
+    color: var(--wc);
+    padding: 30px 0;
+    text-align: left;
+}
+
+.footer address {
+    margin: 0 0 10px 0;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer .footer_customer {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    font-size: 0;
+}
+
+.footer .footer_customer li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer .footer_customer li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+.footer .family_link {
+    position: relative;
+}
+
+.footer .family_link span {
+    display: block;
+    width: 150px;
+    line-height: 30px;
+    padding: 0 15px;
+
+    border: 1px solid #ddd;
+    background: #333;
+    color: #fff;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.footer .family_link span i {
+    float: right;
+    line-height: 30px;
+}
+
+.footer .family_link span.on i {
+    transform: rotate(180deg);
+}
+
+.footer .family_link .flink {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.footer .family_link .flink ul {
+    position: absolute;
+    bottom: 31px;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    border: 1px solid #ddd;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.footer .family_link .flink ul>li {
+    padding: 8px 10px;
+}
+
+.footer .family_link .flink ul>li:not(:nth-child(3)) {
+    border-bottom: 1px solid #ddd;
+}
+
+.footer .family_link .flink ul.on {
+    display: flex;
+}
+
+
+.footer .copy {
+    border-top: 1px solid #666;
+    padding: 20px 0 0 0;
+
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+}

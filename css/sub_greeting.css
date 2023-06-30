@@ -20,6 +20,7 @@
     top: 0;
     background: var(--wc);
     z-index: 999;
+    border-bottom: 1px solid #ddd;
 }
 
 .header .header_wrap {
@@ -137,18 +138,18 @@
 }
 
 /* main greet */
-.content {
-    padding: 100px 0;
-}
 
-.content h2 {
+.greet h2 {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
     font-size: 30px;
     font-weight: 700;
-    margin: 0 0 20px 0;
+
     color: var(--mc);
 }
 
-.content strong {
+.greet .content strong {
     display: block;
     font-size: 25px;
     font-weight: 700;
@@ -156,7 +157,7 @@
     margin: 0 0 20px 0;
 }
 
-.content .txt_box {
+.greet .content .txt_box {
     display: block;
     margin: 0 0 20px 0;
     font-size: 15px;
@@ -167,13 +168,13 @@
     text-align: justify
 }
 
-.content img {
+.greet .content img {
     float: left;
     width: 30%;
     height: 250px;
 }
 
-.content span {
+.greet .content span {
     display: block;
     text-align: right;
 }

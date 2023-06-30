@@ -277,11 +277,11 @@
     font-weight: 700;
 
     color: var(--wc);
-    padding: 30px 20px;
+    padding: 35px 32px;
 }
 
 .main_content .content_top .info {
-    background: #f9f9f9;
+
 
     height: 220px;
     padding: 30px 20px;
@@ -306,7 +306,7 @@
 
 .main_content .content_top .info .news_text strong a {
     display: inline-block;
-    margin: 0 0 0 396px;
+    margin: 0 0 0 399px;
 }
 
 .main_content .content_top .info .news_text p {
@@ -337,7 +337,7 @@
 .main_content .content_bottom .notice,
 .main_content .content_bottom .issue {
     border-top: 1px solid #ddd;
-    background: #f9f9f9;
+
 
     height: 220px;
     padding: 20px 30px;
@@ -357,10 +357,14 @@
     margin: 0 0 15px 0;
 }
 
-.main_content .content_bottom .notice strong a,
-.main_content .content_bottom .issue strong a {
+.main_content .content_bottom .notice strong a {
     display: inline-block;
     margin: 0 0 0 430px;
+}
+
+.main_content .content_bottom .issue strong a {
+    display: inline-block;
+    margin: 0 0 0 431px;
 }
 
 .main_content .content_bottom .notice p,
@@ -498,9 +502,8 @@
 
 .main_event .right {
     background: #f9f9f9;
-    padding: 40px 20px;
+    padding: 40px 55px;
     border-radius: 0 0 50px 0;
-    padding-bottom: 0;
 }
 
 .main_event .right h3 {

@@ -9,7 +9,7 @@ $(function () {
         arrows: false,
         autoplay: true,
         fade: true,
-        dots: true,
+        // dots: true,
     });
 
 

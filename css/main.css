@@ -1,13 +1,20 @@
+* {
+    outline: 1px solid tomato-;
+}
+
+
 :root {
     --mc: #143A62;
     --wc: #ffffff;
 }
 
-* {
-    outline: 1px solid tomato--;
-}
 
-/* ================ */
+
+
+
+
+
+
 
 
 
@@ -20,10 +27,6 @@
 }
 
 .header .header_wrap {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 15px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +38,6 @@
 .header.on {
     border-bottom: 1px solid #ddd;
 }
-
 
 .header.on .header_wrap {
     height: 70px;
@@ -56,45 +58,45 @@
 
 .header .gnb>ul>li {
     position: relative;
-
-    white-space: nowrap;
-    word-break: keep-all;
-
-    line-height: 30px;
 }
 
 .header .gnb>ul>li>a {
-    /* outline: 1px solid tomato; */
-
     display: block;
     line-height: 100px;
     font-size: 18px;
+    white-space: nowrap;
+}
+
+.header.on .gnb>ul>li>a {
+    line-height: 70px;
 }
 
 .header .gnb>ul>li>a i {
     color: #ddd;
+    vertical-align: middle;
 }
 
-.header .gnb>ul>li>.sub {
+.header .gnb>ul>li .sub {
     position: absolute;
     top: 80px;
-    left: -30px;
-    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, 0);
     background: var(--wc);
-    padding: 30px 30px;
+    padding: 20px 30px;
     outline: 2px solid var(--mc);
+    white-space: nowrap;
 
     display: none;
 }
 
-.header .gnb>ul>li:hover>.sub {
+.header .gnb>ul>li:hover .sub {
     display: block;
 }
 
-.header .gnb>ul>li>.sub a {
+.header .gnb>ul>li .sub a {
     display: block;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 32px;
 }
 
 .header .search {
@@ -129,11 +131,10 @@
     border: none;
     outline: none;
     background: transparent;
-
-    font-size: 30px;
+    font-size: 26px;
     vertical-align: middle;
+    cursor: pointer;
 }
-
 
 
 /* main_vusual */
@@ -170,44 +171,43 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
-}
-
-.main_visual h2 {
-    margin: 0 0 30px 0;
+    width: 100%;
     color: #fff;
     text-align: center;
     text-shadow: 0 0 3px #000;
+
+    z-index: 999;
 }
 
-.main_visual h2 strong {
+.main_visual .slogan strong {
     display: block;
     margin: 0 0 20px 0;
     font-size: 20px;
     font-weight: 100;
 }
 
-.main_visual h2 span {
-    display: block;
+.main_visual .slogan h2 {
     font-size: 60px;
     font-weight: 700;
     line-height: 1.2;
+
+    margin: 0 0 30px 0;
 }
 
-.main_visual p {
+.main_visual .slogan p {
     max-width: 578px;
     margin: 0 auto;
-    text-shadow: 0 0 3px #000;
+
     font-size: 15px;
-    color: #fff;
-    text-align: center;
+    line-height: 1.2;
 }
 
+/* 
 .main_visual .slick-dots {
     position: absolute;
     bottom: 200px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     z-index: 999;
 }
 
@@ -215,7 +215,6 @@
     display: inline-block;
     padding: 5px 0;
     cursor: pointer;
-
     font-size: 0;
 }
 
@@ -225,7 +224,6 @@
 
     position: relative;
     background: var(--mc);
-
     width: 15px;
     height: 15px;
     margin: 0 3px;
@@ -233,32 +231,52 @@
 
 .main_visual .slick-dots>li.slick-active button {
     background: var(--wc);
-}
+} */
 
 .main_visual .scr {
     position: absolute;
     left: 50%;
-    bottom: 60px;
-    transform: translate(-50%, -50%);
+    bottom: 100px;
+    transform: translate(-50%, 0);
     padding: 0 15px;
-
     z-index: 1000;
 }
 
 .main_visual .scr::before {
     content: "";
     position: absolute;
-
     top: 0;
-    left: 50%;
+    right: 15px;
     width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    height: 40px;
+    border-radius: 16px;
+    border: 2px solid var(--wc);
 }
+
+.main_visual .scr::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 26px;
+    width: 2px;
+    height: 10px;
+    background: var(--wc);
+    border-radius: 1px;
+    animation: wheel 0.5s infinite;
+}
+
+
+@keyframes wheel {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 5px);
+    }
+}
+
+
 
 
 /* main_section */

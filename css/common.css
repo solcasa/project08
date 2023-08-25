@@ -5,8 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 
 
-body {
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 .blind {
@@ -18,27 +28,43 @@ body {
     overflow: hidden;
 }
 
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+p {
+    word-break: keep-all;
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    line-height: 1;
+    color: #444;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
 .inner {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .sec {
     padding: 100px 0;
-}
-
-.sec .tit {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.bg {
-    background: #f9f9f9;
-}
-
-p {
-    font-size: 16px;
-    line-height: 20px;
 }
